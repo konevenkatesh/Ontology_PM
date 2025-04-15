@@ -1,0 +1,578 @@
+@prefix : <http://w3id.org/00/IproK#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/00/IproK> a owl:Ontology .
+
+:ActualCost a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :CostItem ;
+    rdfs:range xsd:decimal .
+
+:ActualDuration a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:ActualFinish a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:ActualStart a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:ActualUnits a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:decimal .
+
+:AirCompressor a :EquipmentResource,
+        owl:NamedIndividual .
+
+:Aluminum a :MaterialResource,
+        owl:NamedIndividual .
+
+:Architect a :LaborResource,
+        owl:NamedIndividual .
+
+:Asphalt a :MaterialResource,
+        owl:NamedIndividual .
+
+:AssignToProduct a owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :Product .
+
+:AssignsToActor a owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :Actor .
+
+:AtCompleteCost a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :CostItem ;
+    rdfs:range xsd:decimal .
+
+:AtCompleteDuration a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:AtCompleteUnits a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:decimal .
+
+:BackhoeLoader a :EquipmentResource,
+        owl:NamedIndividual .
+
+:BaseRate_onDate a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:decimal .
+
+:BoomLift a :EquipmentResource,
+        owl:NamedIndividual .
+
+:Brick a :MaterialResource,
+        owl:NamedIndividual .
+
+:BudgetedCost a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :CostItem ;
+    rdfs:range xsd:decimal .
+
+:BudgetedUnits a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:decimal .
+
+:Bulldozer a :EquipmentResource,
+        owl:NamedIndividual .
+
+:Carpenter a :LaborResource,
+        owl:NamedIndividual .
+
+:Ceramic a :MaterialResource,
+        owl:NamedIndividual .
+
+:Clay a :MaterialResource,
+        owl:NamedIndividual .
+
+:Compactor a :EquipmentResource,
+        owl:NamedIndividual .
+
+:Concrete a :MaterialResource,
+        owl:NamedIndividual .
+
+:ConcreteMixer a :EquipmentResource,
+        owl:NamedIndividual .
+
+:ConcretePump a :EquipmentResource,
+        owl:NamedIndividual .
+
+:ConcreteWorker a :LaborResource,
+        owl:NamedIndividual .
+
+:Copper a :MaterialResource,
+        owl:NamedIndividual .
+
+:Crane a :EquipmentResource,
+        owl:NamedIndividual .
+
+:CraneOperator a :LaborResource,
+        owl:NamedIndividual .
+
+:Description a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:string .
+
+:DumpTruck a :EquipmentResource,
+        owl:NamedIndividual .
+
+:Electrician a :LaborResource,
+        owl:NamedIndividual .
+
+:Equipment a :ResourceType,
+        owl:NamedIndividual .
+
+:Excavator a :EquipmentResource,
+        owl:NamedIndividual .
+
+:ExcavatorOperator a :LaborResource,
+        owl:NamedIndividual .
+
+:Expense a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :CostItem ;
+    rdfs:range xsd:decimal .
+
+:ExpenseType a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :CostItem ;
+    rdfs:range xsd:string .
+
+:Fiberglass a :MaterialResource,
+        owl:NamedIndividual .
+
+:Foreman a :LaborResource,
+        owl:NamedIndividual .
+
+:Forklift a :EquipmentResource,
+        owl:NamedIndividual .
+
+:Glass a :MaterialResource,
+        owl:NamedIndividual .
+
+:GlobalId a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:string .
+
+:Grader a :EquipmentResource,
+        owl:NamedIndividual .
+
+:Gravel a :MaterialResource,
+        owl:NamedIndividual .
+
+:Gypsum a :MaterialResource,
+        owl:NamedIndividual .
+
+:HeavyEquipmentOperator a :LaborResource,
+        owl:NamedIndividual .
+
+:Id a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:string .
+
+:Insulation a :MaterialResource,
+        owl:NamedIndividual .
+
+:IsAvailable a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:boolean .
+
+:IsCritical a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:boolean .
+
+:IsMilestone a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:boolean .
+
+:IsPrimaryResource a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:boolean .
+
+:Jackhammer a :EquipmentResource,
+        owl:NamedIndividual .
+
+:Labor a :ResourceType,
+        owl:NamedIndividual .
+
+:Laborer a :LaborResource,
+        owl:NamedIndividual .
+
+:LagTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:decimal .
+
+:Mason a :LaborResource,
+        owl:NamedIndividual .
+
+:Material a :ResourceType,
+        owl:NamedIndividual .
+
+:MaxUnits_per_day a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:decimal .
+
+:Mortar a :MaterialResource,
+        owl:NamedIndividual .
+
+:Name a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:string .
+
+:PVC a :MaterialResource,
+        owl:NamedIndividual .
+
+:Paint a :MaterialResource,
+        owl:NamedIndividual .
+
+:Painter a :LaborResource,
+        owl:NamedIndividual .
+
+:PileDriver a :EquipmentResource,
+        owl:NamedIndividual .
+
+:PlannedDuration a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:PlannedFinish a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:PlannedStart a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:Plastic a :MaterialResource,
+        owl:NamedIndividual .
+
+:Plumber a :LaborResource,
+        owl:NamedIndividual .
+
+:Priority a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:integer .
+
+:ProjectBudget a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:decimal .
+
+:ProjectDuration a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectFinishDate a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectID a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectLocation a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectManager a :LaborResource,
+        owl:NamedIndividual .
+
+:ProjectName a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectOwner a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectStartDate a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectStatus a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectType a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:RemainingCost a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :CostItem ;
+    rdfs:range xsd:decimal .
+
+:RemainingDuration a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:RemainingUnits a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:decimal .
+
+:ResourceCode a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:string .
+
+:Roofer a :LaborResource,
+        owl:NamedIndividual .
+
+:SafetyOfficer a :LaborResource,
+        owl:NamedIndividual .
+
+:Sand a :MaterialResource,
+        owl:NamedIndividual .
+
+:Scaffolding a :EquipmentResource,
+        owl:NamedIndividual .
+
+:SiteEngineer a :LaborResource,
+        owl:NamedIndividual .
+
+:Steel a :MaterialResource,
+        owl:NamedIndividual .
+
+:SteelFixer a :LaborResource,
+        owl:NamedIndividual .
+
+:Stone a :MaterialResource,
+        owl:NamedIndividual .
+
+:SurveyingEquipment a :EquipmentResource,
+        owl:NamedIndividual .
+
+:Surveyor a :LaborResource,
+        owl:NamedIndividual .
+
+:TileSetter a :LaborResource,
+        owl:NamedIndividual .
+
+:TowerCrane a :EquipmentResource,
+        owl:NamedIndividual .
+
+:Trencher a :EquipmentResource,
+        owl:NamedIndividual .
+
+:UnitOfMeasure a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:string .
+
+:UserDefined a :ResourceType,
+        owl:NamedIndividual .
+
+:UserDefinedResource a owl:Class ;
+    rdfs:subClassOf :ConstructionResource .
+
+:Welder a :LaborResource,
+        owl:NamedIndividual .
+
+:WeldingMachine a :EquipmentResource,
+        owl:NamedIndividual .
+
+:WheelLoader a :EquipmentResource,
+        owl:NamedIndividual .
+
+:Wood a :MaterialResource,
+        owl:NamedIndividual .
+
+:WorkMethod a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:string .
+
+:hasCostItem a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :CostItem .
+
+:hasPhase a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Project ;
+    rdfs:range :Phase .
+
+:hasResourceCategory a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range :ResourceEnum .
+
+:hasResourceType a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range :ResourceType .
+
+:hasResources a owl:ObjectProperty ;
+    rdfs:domain :ResourceItem ;
+    rdfs:range :Resource .
+
+:hasResourcesItem a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :ResourceItem .
+
+:hasTaskCategory a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :TaskCategory .
+
+:hasTaskSchedule a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :TaskSchedule .
+
+:hasTrackingTag a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range :TrackingTag .
+
+:hasWBS a owl:ObjectProperty ;
+    rdfs:domain :Project ;
+    rdfs:range :WBS .
+
+:hasWorkStatus a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :WorkStatus .
+
+:Actor a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Phase a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Product a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:TaskCategory a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:TrackingTag a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:WorkStatus a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:hasPredecessors a owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :Task ;
+    owl:inverseOf :hasSuccessors .
+
+:hasSubTask a owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :Task ;
+    owl:inverseOf :isSubTaskOf .
+
+:hasSubWBS a owl:ObjectProperty ;
+    rdfs:domain :WBS ;
+    rdfs:range :WBS ;
+    owl:inverseOf :isSubWBSOf .
+
+:hasSuccessors a owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :Task ;
+    owl:inverseOf :hasPredecessors .
+
+:hasTask a owl:ObjectProperty ;
+    rdfs:domain :WBS ;
+    rdfs:range :Task ;
+    owl:inverseOf :isTaskOf .
+
+:isSubTaskOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :Task ;
+    owl:inverseOf :hasSubTask .
+
+:isSubWBSOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :WBS ;
+    rdfs:range :WBS ;
+    owl:inverseOf :hasSubWBS .
+
+:isTaskOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :WBS ;
+    owl:inverseOf :hasTask .
+
+:ResourceEnum a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:ResourceItem a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:ConstructionResource a owl:Class ;
+    rdfs:subClassOf :ResourceEnum .
+
+:ResourceType a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:CostItem a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:WBS a owl:Class ;
+    rdfs:subClassOf :Project .
+
+:TaskSchedule a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Project a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Resource a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:EquipmentResource a owl:Class ;
+    rdfs:subClassOf :ConstructionResource .
+
+:LaborResource a owl:Class ;
+    rdfs:subClassOf :ConstructionResource .
+
+:MaterialResource a owl:Class ;
+    rdfs:subClassOf :ConstructionResource .
+
+:Task a owl:Class ;
+    rdfs:subClassOf :WBS .
+

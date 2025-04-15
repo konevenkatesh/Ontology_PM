@@ -1,0 +1,304 @@
+@prefix : <http://w3id.org/IproK/00/BIMOnto#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/IproK/00/BIMOnto> a owl:Ontology .
+
+:AssignToProcess a owl:ObjectProperty ;
+    rdfs:domain :IfcElement ;
+    rdfs:range :IfcProcess .
+
+:AssignToProduct a owl:ObjectProperty ;
+    rdfs:domain :IfcProcess ;
+    rdfs:range :IfcElement .
+
+:Category a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcElement ;
+    rdfs:range xsd:string .
+
+:CrossSectionArea a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcQuantitySet ;
+    rdfs:range xsd:decimal .
+
+:Description a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcElement ;
+    rdfs:range xsd:string .
+
+:GlobalId a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcElement ;
+    rdfs:range xsd:string .
+
+:GrossVolume a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcQuantitySet ;
+    rdfs:range xsd:decimal .
+
+:Height a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcQuantitySet ;
+    rdfs:range xsd:decimal .
+
+:IfcBeam a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcBearing a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcBuildingElementProxy a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcChimney a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcColumn a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcCourse a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcCovering a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcCurtainWall a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcDeepFoundation a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcDoor a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcEarthworksElement a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcFooting a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcKerb a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcMember a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcMooringDevice a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcNavigationElement a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcPavement a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcPlate a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcRail a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcRailing a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcRamp a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcRampFlight a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcRoad a owl:Class ;
+    rdfs:subClassOf :IfcFacility .
+
+:IfcRoof a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcShadingDevice a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcSlab a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcStair a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcStairFlight a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcTrackElement a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcWall a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:IfcWindow a owl:Class ;
+    rdfs:subClassOf :IfcBuiltElement .
+
+:Length a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcQuantitySet ;
+    rdfs:range xsd:decimal .
+
+:Name a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcElement ;
+    rdfs:range xsd:string .
+
+:NetAreaGrossArea a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcQuantitySet ;
+    rdfs:range xsd:decimal .
+
+:NetSideArea a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcQuantitySet ;
+    rdfs:range xsd:decimal .
+
+:NetVolume a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcQuantitySet ;
+    rdfs:range xsd:decimal .
+
+:NumberOfRiser a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcQuantitySet ;
+    rdfs:range xsd:integer .
+
+:ObjectType a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcElement ;
+    rdfs:range xsd:string .
+
+:OuterSurfaceArea a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcQuantitySet ;
+    rdfs:range xsd:decimal .
+
+:Perimeter a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcQuantitySet ;
+    rdfs:range xsd:decimal .
+
+:PredefinedType a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcElement ;
+    rdfs:range xsd:string .
+
+:RiserHeight a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcQuantitySet ;
+    rdfs:range xsd:decimal .
+
+:Span a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcQuantitySet ;
+    rdfs:range xsd:decimal .
+
+:Tag a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcElement ;
+    rdfs:range xsd:string .
+
+:TreadLength a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcQuantitySet ;
+    rdfs:range xsd:decimal .
+
+:Width a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcQuantitySet ;
+    rdfs:range xsd:decimal .
+
+:containElements a owl:ObjectProperty ;
+    rdfs:domain :IfcBuildingStorey ;
+    rdfs:range :IfcElement .
+
+:haFacility a owl:ObjectProperty ;
+    rdfs:domain :IfcSite ;
+    rdfs:range :IfcFacility .
+
+:hasLevel a owl:ObjectProperty ;
+    rdfs:domain :IfcBuilding ;
+    rdfs:range :IfcBuildingStorey .
+
+:hasMaterial a owl:ObjectProperty ;
+    rdfs:domain :IfcElement ;
+    rdfs:range :IfcMaterial .
+
+:hasMaterialCategory a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :IfcMaterial ;
+    rdfs:range :IfcMaterialCategory .
+
+:hasPropertySet a owl:ObjectProperty ;
+    rdfs:domain :IfcElement ;
+    rdfs:range :IfcPropertySet .
+
+:hasQuantitySet a owl:ObjectProperty ;
+    rdfs:domain :IfcElement ;
+    rdfs:range :IfcQuantitySet .
+
+:hasSite a owl:ObjectProperty ;
+    rdfs:domain :IfcProject ;
+    rdfs:range :IfcSite .
+
+:hasSpace a owl:ObjectProperty ;
+    rdfs:domain :IfcBuildingStorey ;
+    rdfs:range :IfcSpace .
+
+:id a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcElement ;
+    rdfs:range xsd:string .
+
+:isLocatedAt a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :IfcElement ;
+    rdfs:range :IfcBuildingStorey .
+
+:type a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :IfcElement ;
+    rdfs:range xsd:string .
+
+:IfcBuilding a owl:Class ;
+    rdfs:subClassOf :IfcFacility .
+
+:IfcMaterialCategory a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:IfcProject a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:IfcPropertySet a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:IfcSpace a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:IfcMaterial a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:IfcProcess a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:IfcSite a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:IfcFacility a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:IfcBuildingStorey a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:IfcQuantitySet a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:IfcElement a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:IfcBuiltElement a owl:Class ;
+    rdfs:subClassOf :IfcElement .
+

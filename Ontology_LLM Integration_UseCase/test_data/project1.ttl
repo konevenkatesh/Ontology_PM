@@ -1,0 +1,1823 @@
+@prefix : <http://w3id.org/00/IproK#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/00/IproK> a owl:Ontology .
+
+:ActualCost a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :CostItem ;
+    rdfs:range xsd:decimal .
+
+:ActualDuration a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:ActualFinish a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:ActualStart a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:ActualUnits a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:decimal .
+
+:AirCompressor a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "AirCompressor"^^xsd:string ;
+    :Name "AirCompressor"^^xsd:string .
+
+:Aluminum a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Aluminum"^^xsd:string ;
+    :Name "Aluminum"^^xsd:string .
+
+:Architect a :LaborResource,
+        owl:NamedIndividual ;
+    :Id "Architect"^^xsd:string ;
+    :Name "Architect"^^xsd:string .
+
+:Asphalt a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Asphalt"^^xsd:string ;
+    :Name "Asphalt"^^xsd:string .
+
+:AssignToProduct a owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :Product .
+
+:AssignsToActor a owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :Actor .
+
+:AtCompleteCost a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :CostItem ;
+    rdfs:range xsd:decimal .
+
+:AtCompleteDuration a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:AtCompleteUnits a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:decimal .
+
+:BackhoeLoader a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "BackhoeLoader"^^xsd:string ;
+    :Name "BackhoeLoader"^^xsd:string .
+
+:BaseRate_onDate a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:decimal .
+
+:BoomLift a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "BoomLift"^^xsd:string ;
+    :Name "BoomLift"^^xsd:string .
+
+:BudgetedCost a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :CostItem ;
+    rdfs:range xsd:decimal .
+
+:BudgetedUnits a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:decimal .
+
+:Bulldozer a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "Bulldozer"^^xsd:string ;
+    :Name "Bulldozer"^^xsd:string .
+
+:Cancelled a :WorkStatus,
+        owl:NamedIndividual .
+
+:Carpenter a :LaborResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 700.0 ;
+    :Id "Carpenter"^^xsd:string ;
+    :Name "Carpenter"^^xsd:string ;
+    :UnitOfMeasure "Per day"^^xsd:string .
+
+:Ceramic a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Ceramic"^^xsd:string ;
+    :Name "Ceramic"^^xsd:string .
+
+:Clay a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Clay"^^xsd:string ;
+    :Name "Clay"^^xsd:string .
+
+:Clousure a :Phase,
+        owl:NamedIndividual .
+
+:Compactor a :EquipmentResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 2000.0 ;
+    :Id "Compactor"^^xsd:string ;
+    :Name "Compactor"^^xsd:string ;
+    :UnitOfMeasure "Per day"^^xsd:string .
+
+:Completed a :WorkStatus,
+        owl:NamedIndividual .
+
+:Concrete a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Concrete"^^xsd:string ;
+    :Name "Concrete"^^xsd:string .
+
+:ConcretePump a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "ConcretePump"^^xsd:string ;
+    :Name "ConcretePump"^^xsd:string .
+
+:ConcreteWorker a :LaborResource,
+        owl:NamedIndividual ;
+    :Id "ConcreteWorker"^^xsd:string ;
+    :Name "ConcreteWorker"^^xsd:string .
+
+:Copper a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Copper"^^xsd:string ;
+    :Name "Copper"^^xsd:string .
+
+:Crane a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "Crane"^^xsd:string ;
+    :Name "Crane"^^xsd:string .
+
+:CraneOperator a :LaborResource,
+        owl:NamedIndividual ;
+    :Id "CraneOperator"^^xsd:string ;
+    :Name "CraneOperator"^^xsd:string .
+
+:Description a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:string .
+
+:DumpTruck a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "DumpTruck"^^xsd:string ;
+    :Name "DumpTruck"^^xsd:string .
+
+:ExcavatorOperator a :LaborResource,
+        owl:NamedIndividual ;
+    :Id "ExcavatorOperator"^^xsd:string ;
+    :Name "ExcavatorOperator"^^xsd:string .
+
+:Execution a :Phase,
+        owl:NamedIndividual .
+
+:Expense a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :CostItem ;
+    rdfs:range xsd:decimal .
+
+:ExpenseType a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :CostItem ;
+    rdfs:range xsd:string .
+
+:Fiberglass a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Fiberglass"^^xsd:string ;
+    :Name "Fiberglass"^^xsd:string .
+
+:Foreman a :LaborResource,
+        owl:NamedIndividual ;
+    :Id "Foreman"^^xsd:string ;
+    :Name "Foreman"^^xsd:string .
+
+:Forklift a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "Forklift"^^xsd:string ;
+    :Name "Forklift"^^xsd:string .
+
+:Glass a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Glass"^^xsd:string ;
+    :Name "Glass"^^xsd:string .
+
+:GlobalId a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:string .
+
+:Grader a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "Grader"^^xsd:string ;
+    :Name "Grader"^^xsd:string .
+
+:Gravel a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Gravel"^^xsd:string ;
+    :Name "Gravel"^^xsd:string .
+
+:Gypsum a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Gypsum"^^xsd:string ;
+    :Name "Gypsum"^^xsd:string .
+
+:HeavyEquipmentOperator a :LaborResource,
+        owl:NamedIndividual ;
+    :Id "HeavyEquipmentOperator"^^xsd:string ;
+    :Name "HeavyEquipmentOperator"^^xsd:string .
+
+:Id a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:string .
+
+:InProgress a :WorkStatus,
+        owl:NamedIndividual .
+
+:Initiation a :Phase,
+        owl:NamedIndividual .
+
+:Insulation a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Insulation"^^xsd:string ;
+    :Name "Insulation"^^xsd:string .
+
+:IsAvailable a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:boolean .
+
+:IsCritical a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:boolean .
+
+:IsMilestone a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:boolean .
+
+:IsPrimaryResource a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:boolean .
+
+:Jackhammer a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "Jackhammer"^^xsd:string ;
+    :Name "Jackhammer"^^xsd:string .
+
+:LagTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:decimal .
+
+:MaxUnits_per_day a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:decimal .
+
+:MonitoringandControlling a :Phase,
+        owl:NamedIndividual .
+
+:Mortar a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Mortar"^^xsd:string ;
+    :Name "Mortar"^^xsd:string .
+
+:Name a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:string .
+
+:NotStarted a :WorkStatus,
+        owl:NamedIndividual .
+
+:OnHold a :WorkStatus,
+        owl:NamedIndividual .
+
+:PROJ_001 a :Project,
+        owl:NamedIndividual ;
+    :ProjectID "PROJ_001"^^xsd:string ;
+    :ProjectLocation "NITK"^^xsd:string ;
+    :ProjectName "Duplex House"^^xsd:string ;
+    :ProjectOwner "NITK"^^xsd:string ;
+    :ProjectStartDate "2025-01-01"^^xsd:date ;
+    :ProjectStatus ""^^xsd:string ;
+    :ProjectType "Residential"^^xsd:string ;
+    :hasWBS :WBS_001,
+        :WBS_002,
+        :WBS_003,
+        :WBS_004,
+        :WBS_005,
+        :WBS_006 .
+
+:PVC a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "PVC"^^xsd:string ;
+    :Name "PVC"^^xsd:string .
+
+:PileDriver a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "PileDriver"^^xsd:string ;
+    :Name "PileDriver"^^xsd:string .
+
+:PlannedDuration a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:PlannedFinish a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:PlannedStart a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:Planning a :Phase,
+        owl:NamedIndividual .
+
+:Plastic a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Plastic"^^xsd:string ;
+    :Name "Plastic"^^xsd:string .
+
+:Priority a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:integer .
+
+:ProjectBudget a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:decimal .
+
+:ProjectDuration a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectFinishDate a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectID a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectLocation a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectManager a :LaborResource,
+        owl:NamedIndividual ;
+    :Id "ProjectManager"^^xsd:string ;
+    :Name "ProjectManager"^^xsd:string .
+
+:ProjectName a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectOwner a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectStartDate a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectStatus a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:ProjectType a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Project ;
+    rdfs:range xsd:string .
+
+:RemainingCost a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :CostItem ;
+    rdfs:range xsd:decimal .
+
+:RemainingDuration a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :TaskSchedule ;
+    rdfs:range xsd:string .
+
+:RemainingUnits a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:decimal .
+
+:ResourceCode a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:string .
+
+:Roofer a :LaborResource,
+        owl:NamedIndividual ;
+    :Id "Roofer"^^xsd:string ;
+    :Name "Roofer"^^xsd:string .
+
+:SafetyOfficer a :LaborResource,
+        owl:NamedIndividual ;
+    :Id "SafetyOfficer"^^xsd:string ;
+    :Name "SafetyOfficer"^^xsd:string .
+
+:SiteEngineer a :LaborResource,
+        owl:NamedIndividual ;
+    :Id "SiteEngineer"^^xsd:string ;
+    :Name "SiteEngineer"^^xsd:string .
+
+:SteelFixer a :LaborResource,
+        owl:NamedIndividual ;
+    :Id "SteelFixer"^^xsd:string ;
+    :Name "SteelFixer"^^xsd:string .
+
+:Stone a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Stone"^^xsd:string ;
+    :Name "Stone"^^xsd:string .
+
+:SurveyingEquipment a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "SurveyingEquipment"^^xsd:string ;
+    :Name "SurveyingEquipment"^^xsd:string .
+
+:TA030 a :Task,
+        owl:NamedIndividual ;
+    :Description "Site clearing and leveling."^^xsd:string ;
+    :Id "TA030"^^xsd:string ;
+    :Name "Site Preparation"^^xsd:string ;
+    :hasCostItem :CI_TA030 ;
+    :hasResourcesItem :RI_TA030 ;
+    :hasTaskSchedule :TS_TA030 ;
+    :isTaskOf :WBS_001 .
+
+:TA040 a :Task,
+        owl:NamedIndividual ;
+    :Description "Excavation for footings."^^xsd:string ;
+    :Id "TA040"^^xsd:string ;
+    :Name "Excavation"^^xsd:string ;
+    :hasCostItem :CI_TA040 ;
+    :hasResourcesItem :RI_TA040 ;
+    :hasTaskSchedule :TS_TA040 ;
+    :isTaskOf :WBS_002 .
+
+:TA050 a :Task,
+        owl:NamedIndividual ;
+    :Description "Reinforcement, formwork, and concreting."^^xsd:string ;
+    :Id "TA050"^^xsd:string ;
+    :Name "Footing Construction"^^xsd:string ;
+    :hasCostItem :CI_TA050 ;
+    :hasResourcesItem :RI_TA050 ;
+    :hasTaskSchedule :TS_TA050 ;
+    :isTaskOf :WBS_002 .
+
+:TA060 a :Task,
+        owl:NamedIndividual ;
+    :Description "Beam construction and soil backfilling."^^xsd:string ;
+    :Id "TA060"^^xsd:string ;
+    :Name "Plinth Beam and Backfilling"^^xsd:string ;
+    :hasCostItem :CI_TA060 ;
+    :hasResourcesItem :RI_TA060 ;
+    :hasTaskSchedule :TS_TA060 ;
+    :isTaskOf :WBS_002 .
+
+:TA070 a :Task,
+        owl:NamedIndividual ;
+    :Description "Steel and concrete work for columns/beams."^^xsd:string ;
+    :Id "TA070"^^xsd:string ;
+    :Name "Ground Floor Columns and Beams"^^xsd:string ;
+    :hasCostItem :CI_TA070 ;
+    :hasResourcesItem :RI_TA070 ;
+    :hasTaskSchedule :TS_TA070 ;
+    :isTaskOf :WBS_003 .
+
+:TA080 a :Task,
+        owl:NamedIndividual ;
+    :Description "Masonry work."^^xsd:string ;
+    :Id "TA080"^^xsd:string ;
+    :Name "Ground Floor Walls"^^xsd:string ;
+    :hasCostItem :CI_TA080 ;
+    :hasResourcesItem :RI_TA080 ;
+    :hasTaskSchedule :TS_TA080 ;
+    :isTaskOf :WBS_003 .
+
+:TA090 a :Task,
+        owl:NamedIndividual ;
+    :Description "Slab casting and reinforcement."^^xsd:string ;
+    :Id "TA090"^^xsd:string ;
+    :Name "First Floor Slab"^^xsd:string ;
+    :hasCostItem :CI_TA090 ;
+    :hasResourcesItem :RI_TA090 ;
+    :hasTaskSchedule :TS_TA090 ;
+    :isTaskOf :WBS_003 .
+
+:TA100 a :Task,
+        owl:NamedIndividual ;
+    :Description "Same as ground floor."^^xsd:string ;
+    :Id "TA100"^^xsd:string ;
+    :Name "First Floor Columns and Beams"^^xsd:string ;
+    :hasCostItem :CI_TA100 ;
+    :hasResourcesItem :RI_TA100 ;
+    :hasTaskSchedule :TS_TA100 ;
+    :isTaskOf :WBS_003 .
+
+:TA110 a :Task,
+        owl:NamedIndividual ;
+    :Description "Masonry work."^^xsd:string ;
+    :Id "TA110"^^xsd:string ;
+    :Name "First Floor Walls"^^xsd:string ;
+    :hasCostItem :CI_TA110 ;
+    :hasResourcesItem :RI_TA110 ;
+    :hasTaskSchedule :TS_TA110 ;
+    :isTaskOf :WBS_003 .
+
+:TA120 a :Task,
+        owl:NamedIndividual ;
+    :Description "Concreting for roof."^^xsd:string ;
+    :Id "TA120"^^xsd:string ;
+    :Name "Roof Slab"^^xsd:string ;
+    :hasCostItem :CI_TA120 ;
+    :hasResourcesItem :RI_TA120 ;
+    :hasTaskSchedule :TS_TA120 ;
+    :isTaskOf :WBS_004 .
+
+:TA130 a :Task,
+        owl:NamedIndividual ;
+    :Description "Roof protection from water ingress."^^xsd:string ;
+    :Id "TA130"^^xsd:string ;
+    :Name "Waterproofing"^^xsd:string ;
+    :hasCostItem :CI_TA130 ;
+    :hasResourcesItem :RI_TA130 ;
+    :hasTaskSchedule :TS_TA130 ;
+    :isTaskOf :WBS_004 .
+
+:TA140 a :Task,
+        owl:NamedIndividual ;
+    :Description "Internal and external walls."^^xsd:string ;
+    :Id "TA140"^^xsd:string ;
+    :Name "Plastering"^^xsd:string ;
+    :hasCostItem :CI_TA140 ;
+    :hasResourcesItem :RI_TA140 ;
+    :hasTaskSchedule :TS_TA140 ;
+    :isTaskOf :WBS_005 .
+
+:TA150 a :Task,
+        owl:NamedIndividual ;
+    :Description "Tile and floor finish."^^xsd:string ;
+    :Id "TA150"^^xsd:string ;
+    :Name "Flooring"^^xsd:string ;
+    :hasCostItem :CI_TA150 ;
+    :hasResourcesItem :RI_TA150 ;
+    :hasTaskSchedule :TS_TA150 ;
+    :isTaskOf :WBS_005 .
+
+:TA160 a :Task,
+        owl:NamedIndividual ;
+    :Description "Internal and external painting."^^xsd:string ;
+    :Id "TA160"^^xsd:string ;
+    :Name "Painting"^^xsd:string ;
+    :hasCostItem :CI_TA160 ;
+    :hasResourcesItem :RI_TA160 ;
+    :hasTaskSchedule :TS_TA160 ;
+    :isTaskOf :WBS_005 .
+
+:TA170 a :Task,
+        owl:NamedIndividual ;
+    :Description "Wiring and plumbing fittings."^^xsd:string ;
+    :Id "TA170"^^xsd:string ;
+    :Name "Electrical and Plumbing"^^xsd:string ;
+    :hasCostItem :CI_TA170 ;
+    :hasResourcesItem :RI_TA170 ;
+    :hasTaskSchedule :TS_TA170 ;
+    :isTaskOf :WBS_005 .
+
+:TA180 a :Task,
+        owl:NamedIndividual ;
+    :Description "Masonry work for the compound."^^xsd:string ;
+    :Id "TA180"^^xsd:string ;
+    :Name "Compound Wall"^^xsd:string ;
+    :hasCostItem :CI_TA180 ;
+    :hasResourcesItem :RI_TA180 ;
+    :hasTaskSchedule :TS_TA180 ;
+    :isTaskOf :WBS_006 .
+
+:TA190 a :Task,
+        owl:NamedIndividual ;
+    :Description "Driveways, garden, and pathways."^^xsd:string ;
+    :Id "TA190"^^xsd:string ;
+    :Name "Landscaping"^^xsd:string ;
+    :hasCostItem :CI_TA190 ;
+    :hasResourcesItem :RI_TA190 ;
+    :hasTaskSchedule :TS_TA190 ;
+    :isTaskOf :WBS_006 .
+
+:TileSetter a :LaborResource,
+        owl:NamedIndividual ;
+    :Id "TileSetter"^^xsd:string ;
+    :Name "TileSetter"^^xsd:string .
+
+:TowerCrane a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "TowerCrane"^^xsd:string ;
+    :Name "TowerCrane"^^xsd:string .
+
+:Trencher a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "Trencher"^^xsd:string ;
+    :Name "Trencher"^^xsd:string .
+
+:UnitOfMeasure a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:string .
+
+:UserDefined a :ResourceType,
+        owl:NamedIndividual .
+
+:UserDefinedResource a owl:Class ;
+    rdfs:subClassOf :ConstructionResource .
+
+:Welder a :LaborResource,
+        owl:NamedIndividual ;
+    :Id "Welder"^^xsd:string ;
+    :Name "Welder"^^xsd:string .
+
+:WeldingMachine a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "WeldingMachine"^^xsd:string ;
+    :Name "WeldingMachine"^^xsd:string .
+
+:WheelLoader a :EquipmentResource,
+        owl:NamedIndividual ;
+    :Id "WheelLoader"^^xsd:string ;
+    :Name "WheelLoader"^^xsd:string .
+
+:Wood a :MaterialResource,
+        owl:NamedIndividual ;
+    :Id "Wood"^^xsd:string ;
+    :Name "Wood"^^xsd:string .
+
+:WorkMethod a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Task ;
+    rdfs:range xsd:string .
+
+:hasCostItem a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :CostItem .
+
+:hasPhase a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Project ;
+    rdfs:range :Phase .
+
+:hasResourceCategory a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range :ResourceEnum .
+
+:hasResourceType a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range :ResourceType .
+
+:hasResources a owl:ObjectProperty ;
+    rdfs:domain :ResourceItem ;
+    rdfs:range :Resource .
+
+:hasResourcesItem a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :ResourceItem .
+
+:hasTaskCategory a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :TaskCategory .
+
+:hasTaskSchedule a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :TaskSchedule .
+
+:hasTrackingTag a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range :TrackingTag .
+
+:hasWBS a owl:ObjectProperty ;
+    rdfs:domain :Project ;
+    rdfs:range :WBS .
+
+:hasWorkStatus a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :WorkStatus .
+
+:Actor a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Aggregates a :MaterialResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 2000.0 ;
+    :Id "Aggregates"^^xsd:string ;
+    :Name "Aggregates"^^xsd:string ;
+    :UnitOfMeasure "Per cum"^^xsd:string .
+
+:Aggregates_TA050 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 5.0 ;
+    :Id "Aggregates_TA050"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Aggregates ;
+    :hasResourceType :Material .
+
+:Brick_TA080 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 5000.0 ;
+    :Id "Brick_TA080"^^xsd:string ;
+    :IsPrimaryResource true ;
+    :hasResourceCategory :Brick ;
+    :hasResourceType :Material .
+
+:Brick_TA110 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 5000.0 ;
+    :Id "Brick_TA110"^^xsd:string ;
+    :IsPrimaryResource true ;
+    :hasResourceCategory :Brick ;
+    :hasResourceType :Material .
+
+:CI_TA010 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 10000.0 ;
+    :AtCompleteCost 10000.0 ;
+    :BudgetedCost 13200.0 ;
+    :Expense "10000"^^xsd:string ;
+    :Id "CI_TA010"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA020 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 20000.0 ;
+    :AtCompleteCost 20000.0 ;
+    :BudgetedCost 20000.0 ;
+    :Expense "20000"^^xsd:string ;
+    :Id "CI_TA020"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA030 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 0.0 ;
+    :AtCompleteCost 0.0 ;
+    :BudgetedCost 25600.0 ;
+    :Id "CI_TA030"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA040 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 0.0 ;
+    :AtCompleteCost 0.0 ;
+    :BudgetedCost 20000.0 ;
+    :Id "CI_TA040"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA050 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 0.0 ;
+    :AtCompleteCost 0.0 ;
+    :BudgetedCost 118500.0 ;
+    :Id "CI_TA050"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA060 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 30000.0 ;
+    :AtCompleteCost 30000.0 ;
+    :BudgetedCost 30000.0 ;
+    :Expense "30000"^^xsd:string ;
+    :Id "CI_TA060"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA070 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 0.0 ;
+    :AtCompleteCost 0.0 ;
+    :BudgetedCost 350000.0 ;
+    :Id "CI_TA070"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA080 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 0.0 ;
+    :AtCompleteCost 0.0 ;
+    :BudgetedCost 71000.0 ;
+    :Id "CI_TA080"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA090 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 0.0 ;
+    :AtCompleteCost 0.0 ;
+    :BudgetedCost 150000.0 ;
+    :Id "CI_TA090"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA100 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 0.0 ;
+    :AtCompleteCost 0.0 ;
+    :BudgetedCost 245000.0 ;
+    :Id "CI_TA100"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA110 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 0.0 ;
+    :AtCompleteCost 0.0 ;
+    :BudgetedCost 125000.0 ;
+    :Id "CI_TA110"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA120 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 0.0 ;
+    :AtCompleteCost 0.0 ;
+    :BudgetedCost 110000.0 ;
+    :Id "CI_TA120"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA130 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 0.0 ;
+    :AtCompleteCost 0.0 ;
+    :BudgetedCost 28000.0 ;
+    :Id "CI_TA130"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA140 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 0.0 ;
+    :AtCompleteCost 0.0 ;
+    :BudgetedCost 90000.0 ;
+    :Id "CI_TA140"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA150 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 0.0 ;
+    :AtCompleteCost 0.0 ;
+    :BudgetedCost 166000.0 ;
+    :Id "CI_TA150"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA160 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 0.0 ;
+    :AtCompleteCost 0.0 ;
+    :BudgetedCost 40000.0 ;
+    :Id "CI_TA160"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA170 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 50000.0 ;
+    :AtCompleteCost 50000.0 ;
+    :BudgetedCost 120000.0 ;
+    :Expense "50000"^^xsd:string ;
+    :Id "CI_TA170"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA180 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 0.0 ;
+    :AtCompleteCost 0.0 ;
+    :BudgetedCost 23750.0 ;
+    :Id "CI_TA180"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:CI_TA190 a :CostItem,
+        owl:NamedIndividual ;
+    :ActualCost 40000.0 ;
+    :AtCompleteCost 40000.0 ;
+    :BudgetedCost 40000.0 ;
+    :Expense "40000"^^xsd:string ;
+    :Id "CI_TA190"^^xsd:string ;
+    :RemainingCost 0.0 .
+
+:Cement_TA050 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 40.0 ;
+    :Id "Cement_TA050"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Cement ;
+    :hasResourceType :Material .
+
+:Cement_TA070 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 100.0 ;
+    :Id "Cement_TA070"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Cement ;
+    :hasResourceType :Material .
+
+:Cement_TA090 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 75.0 ;
+    :Id "Cement_TA090"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Cement ;
+    :hasResourceType :Material .
+
+:Cement_TA100 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 100.0 ;
+    :Id "Cement_TA100"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Cement ;
+    :hasResourceType :Material .
+
+:Cement_TA120 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 50.0 ;
+    :Id "Cement_TA120"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Cement ;
+    :hasResourceType :Material .
+
+:Cement_TA140 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 100.0 ;
+    :Id "Cement_TA140"^^xsd:string ;
+    :IsPrimaryResource true ;
+    :hasResourceCategory :Cement ;
+    :hasResourceType :Material .
+
+:ConcreteBlocks_TA080 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 1000.0 ;
+    :Id "ConcreteBlocks_TA080"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :ConcreteBlocks ;
+    :hasResourceType :Material .
+
+:ConcreteBlocks_TA110 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 1000.0 ;
+    :Id "ConcreteBlocks_TA110"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :ConcreteBlocks ;
+    :hasResourceType :Material .
+
+:ConcreteBlocks_TA180 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 250.0 ;
+    :Id "ConcreteBlocks_TA180"^^xsd:string ;
+    :IsPrimaryResource true ;
+    :hasResourceCategory :ConcreteBlocks ;
+    :hasResourceType :Material .
+
+:ConcreteMixer_TA070 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 10.0 ;
+    :Id "ConcreteMixer_TA070"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :ConcreteMixer ;
+    :hasResourceType :Equipment .
+
+:ConcreteMixer_TA090 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 10.0 ;
+    :Id "ConcreteMixer_TA090"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :ConcreteMixer ;
+    :hasResourceType :Equipment .
+
+:ConcreteMixer_TA100 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 10.0 ;
+    :Id "ConcreteMixer_TA100"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :ConcreteMixer ;
+    :hasResourceType :Equipment .
+
+:Electrician a :LaborResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 700.0 ;
+    :Id "Electrician"^^xsd:string ;
+    :Name "Electrician"^^xsd:string ;
+    :UnitOfMeasure "Per day"^^xsd:string .
+
+:Electrician_TA170 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 50.0 ;
+    :Id "Electrician_TA170"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Electrician ;
+    :hasResourceType :Labor .
+
+:Excavator_TA030 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 3.0 ;
+    :Id "Excavator_TA030"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Excavator ;
+    :hasResourceType :Equipment .
+
+:Excavator_TA040 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 2.0 ;
+    :Id "Excavator_TA040"^^xsd:string ;
+    :IsPrimaryResource true ;
+    :hasResourceCategory :Excavator ;
+    :hasResourceType :Equipment .
+
+:Laborer_TA030 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 4.0 ;
+    :Id "Laborer_TA030"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Laborer ;
+    :hasResourceType :Labor .
+
+:Laborer_TA040 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 10.0 ;
+    :Id "Laborer_TA040"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Laborer ;
+    :hasResourceType :Labor .
+
+:Laborer_TA070 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 100.0 ;
+    :Id "Laborer_TA070"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Laborer ;
+    :hasResourceType :Labor .
+
+:Laborer_TA100 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 100.0 ;
+    :Id "Laborer_TA100"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Laborer ;
+    :hasResourceType :Labor .
+
+:Laborer_TA120 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 50.0 ;
+    :Id "Laborer_TA120"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Laborer ;
+    :hasResourceType :Labor .
+
+:Laborer_TA130 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 30.0 ;
+    :Id "Laborer_TA130"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Laborer ;
+    :hasResourceType :Labor .
+
+:Laborer_TA140 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 50.0 ;
+    :Id "Laborer_TA140"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Laborer ;
+    :hasResourceType :Labor .
+
+:Laborer_TA150 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 40.0 ;
+    :Id "Laborer_TA150"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Laborer ;
+    :hasResourceType :Labor .
+
+:Mason_TA080 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 10.0 ;
+    :Id "Mason_TA080"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Mason ;
+    :hasResourceType :Labor .
+
+:Mason_TA110 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 100.0 ;
+    :Id "Mason_TA110"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Mason ;
+    :hasResourceType :Labor .
+
+:Mason_TA180 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 25.0 ;
+    :Id "Mason_TA180"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Mason ;
+    :hasResourceType :Labor .
+
+:Paint a :MaterialResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 300.0 ;
+    :Id "Paint"^^xsd:string ;
+    :Name "Paint"^^xsd:string ;
+    :UnitOfMeasure "Per liter"^^xsd:string .
+
+:Paint_TA160 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 50.0 ;
+    :Id "Paint_TA160"^^xsd:string ;
+    :IsPrimaryResource true ;
+    :hasResourceCategory :Paint ;
+    :hasResourceType :Material .
+
+:Painter a :LaborResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 500.0 ;
+    :Id "Painter"^^xsd:string ;
+    :Name "Painter"^^xsd:string ;
+    :UnitOfMeasure "Per day"^^xsd:string .
+
+:Painter_TA160 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 50.0 ;
+    :Id "Painter_TA160"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Painter ;
+    :hasResourceType :Labor .
+
+:Plumber a :LaborResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 700.0 ;
+    :Id "Plumber"^^xsd:string ;
+    :Name "Plumber"^^xsd:string ;
+    :UnitOfMeasure "Per day"^^xsd:string .
+
+:Plumber_TA170 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 50.0 ;
+    :Id "Plumber_TA170"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Plumber ;
+    :hasResourceType :Labor .
+
+:Product a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:RI_TA010 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA010"^^xsd:string ;
+    :hasResources :Surveyor_TA010 .
+
+:RI_TA020 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA020"^^xsd:string .
+
+:RI_TA030 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA030"^^xsd:string ;
+    :hasResources :Excavator_TA030,
+        :Laborer_TA030 .
+
+:RI_TA040 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA040"^^xsd:string ;
+    :hasResources :Excavator_TA040,
+        :Laborer_TA040 .
+
+:RI_TA050 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA050"^^xsd:string ;
+    :hasResources :Aggregates_TA050,
+        :Cement_TA050,
+        :Sand_TA050,
+        :Scaffolding_TA050,
+        :Steel_TA050 .
+
+:RI_TA060 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA060"^^xsd:string .
+
+:RI_TA070 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA070"^^xsd:string ;
+    :hasResources :Cement_TA070,
+        :ConcreteMixer_TA070,
+        :Laborer_TA070,
+        :Scaffolding_TA070,
+        :Steel_TA070,
+        :Vibrator_TA070 .
+
+:RI_TA080 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA080"^^xsd:string ;
+    :hasResources :Brick_TA080,
+        :ConcreteBlocks_TA080,
+        :Mason_TA080 .
+
+:RI_TA090 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA090"^^xsd:string ;
+    :hasResources :Cement_TA090,
+        :ConcreteMixer_TA090,
+        :Scaffolding_TA090,
+        :Steel_TA090,
+        :Vibrator_TA090 .
+
+:RI_TA100 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA100"^^xsd:string ;
+    :hasResources :Cement_TA100,
+        :ConcreteMixer_TA100,
+        :Laborer_TA100,
+        :Steel_TA100 .
+
+:RI_TA110 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA110"^^xsd:string ;
+    :hasResources :Brick_TA110,
+        :ConcreteBlocks_TA110,
+        :Mason_TA110 .
+
+:RI_TA120 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA120"^^xsd:string ;
+    :hasResources :Cement_TA120,
+        :Laborer_TA120,
+        :Steel_TA120,
+        :WaterproofingMaterial_TA120 .
+
+:RI_TA130 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA130"^^xsd:string ;
+    :hasResources :Laborer_TA130,
+        :WaterproofingMaterial_TA130 .
+
+:RI_TA140 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA140"^^xsd:string ;
+    :hasResources :Cement_TA140,
+        :Laborer_TA140,
+        :Sand_TA140 .
+
+:RI_TA150 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA150"^^xsd:string ;
+    :hasResources :Laborer_TA150,
+        :Tiles_TA150 .
+
+:RI_TA160 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA160"^^xsd:string ;
+    :hasResources :Paint_TA160,
+        :Painter_TA160 .
+
+:RI_TA170 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA170"^^xsd:string ;
+    :hasResources :Electrician_TA170,
+        :Plumber_TA170 .
+
+:RI_TA180 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA180"^^xsd:string ;
+    :hasResources :ConcreteBlocks_TA180,
+        :Mason_TA180 .
+
+:RI_TA190 a :ResourceItem,
+        owl:NamedIndividual ;
+    :Id "RI_TA190"^^xsd:string .
+
+:Sand_TA050 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 5.0 ;
+    :Id "Sand_TA050"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Sand ;
+    :hasResourceType :Material .
+
+:Sand_TA140 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 20.0 ;
+    :Id "Sand_TA140"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Sand ;
+    :hasResourceType :Material .
+
+:Scaffolding_TA050 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 150.0 ;
+    :Id "Scaffolding_TA050"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Scaffolding ;
+    :hasResourceType :Equipment .
+
+:Scaffolding_TA070 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 1000.0 ;
+    :Id "Scaffolding_TA070"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Scaffolding ;
+    :hasResourceType :Equipment .
+
+:Scaffolding_TA090 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 200.0 ;
+    :Id "Scaffolding_TA090"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Scaffolding ;
+    :hasResourceType :Equipment .
+
+:Steel_TA050 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 1000.0 ;
+    :Id "Steel_TA050"^^xsd:string ;
+    :IsPrimaryResource true ;
+    :hasResourceCategory :Steel ;
+    :hasResourceType :Material .
+
+:Steel_TA070 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 2000.0 ;
+    :Id "Steel_TA070"^^xsd:string ;
+    :IsPrimaryResource true ;
+    :hasResourceCategory :Steel ;
+    :hasResourceType :Material .
+
+:Steel_TA090 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 1000.0 ;
+    :Id "Steel_TA090"^^xsd:string ;
+    :IsPrimaryResource true ;
+    :hasResourceCategory :Steel ;
+    :hasResourceType :Material .
+
+:Steel_TA100 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 2000.0 ;
+    :Id "Steel_TA100"^^xsd:string ;
+    :IsPrimaryResource true ;
+    :hasResourceCategory :Steel ;
+    :hasResourceType :Material .
+
+:Steel_TA120 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 1000.0 ;
+    :Id "Steel_TA120"^^xsd:string ;
+    :IsPrimaryResource true ;
+    :hasResourceCategory :Steel ;
+    :hasResourceType :Material .
+
+:Surveyor a :LaborResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 800.0 ;
+    :Id "Surveyor"^^xsd:string ;
+    :Name "Surveyor"^^xsd:string ;
+    :UnitOfMeasure "Per day"^^xsd:string .
+
+:Surveyor_TA010 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 4.0 ;
+    :Id "Surveyor_TA010"^^xsd:string ;
+    :IsPrimaryResource true ;
+    :hasResourceCategory :Surveyor ;
+    :hasResourceType :Labor .
+
+:TA010 a :Task,
+        owl:NamedIndividual ;
+    :Description "Includes survey and soil testing tasks."^^xsd:string ;
+    :Id "TA010"^^xsd:string ;
+    :Name "Land Survey and Soil Testing"^^xsd:string ;
+    :hasCostItem :CI_TA010 ;
+    :hasResourcesItem :RI_TA010 ;
+    :hasTaskSchedule :TS_TA010 ;
+    :isTaskOf :WBS_001 .
+
+:TA020 a :Task,
+        owl:NamedIndividual ;
+    :Description "Submission of plans and approvals."^^xsd:string ;
+    :Id "TA020"^^xsd:string ;
+    :Name "Approvals and Permits"^^xsd:string ;
+    :hasCostItem :CI_TA020 ;
+    :hasPredecessors :TA010,
+        :TA020 ;
+    :hasResourcesItem :RI_TA020 ;
+    :hasTaskSchedule :TS_TA020 ;
+    :isTaskOf :WBS_001 .
+
+:TS_TA010 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA010"^^xsd:string ;
+    :PlannedFinish "2025-01-03"^^xsd:date ;
+    :PlannedStart "2025-01-01"^^xsd:date .
+
+:TS_TA020 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA020"^^xsd:string ;
+    :PlannedFinish "2025-01-08"^^xsd:date ;
+    :PlannedStart "2025-01-04"^^xsd:date .
+
+:TS_TA030 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA030"^^xsd:string ;
+    :PlannedFinish "2025-01-15"^^xsd:date ;
+    :PlannedStart "2025-01-09"^^xsd:date .
+
+:TS_TA040 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA040"^^xsd:string ;
+    :PlannedFinish "2025-01-21"^^xsd:date ;
+    :PlannedStart "2025-01-16"^^xsd:date .
+
+:TS_TA050 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA050"^^xsd:string ;
+    :PlannedFinish "2025-01-27"^^xsd:date ;
+    :PlannedStart "2025-01-22"^^xsd:date .
+
+:TS_TA060 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA060"^^xsd:string ;
+    :PlannedFinish "2025-02-13"^^xsd:date ;
+    :PlannedStart "2025-01-28"^^xsd:date .
+
+:TS_TA070 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA070"^^xsd:string ;
+    :PlannedFinish "2025-02-20"^^xsd:date ;
+    :PlannedStart "2025-02-14"^^xsd:date .
+
+:TS_TA080 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA080"^^xsd:string ;
+    :PlannedFinish "2025-02-28"^^xsd:date ;
+    :PlannedStart "2025-02-21"^^xsd:date .
+
+:TS_TA090 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA090"^^xsd:string ;
+    :PlannedFinish "2025-03-12"^^xsd:date ;
+    :PlannedStart "2025-03-01"^^xsd:date .
+
+:TS_TA100 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA100"^^xsd:string ;
+    :PlannedFinish "2025-03-22"^^xsd:date ;
+    :PlannedStart "2025-03-14"^^xsd:date .
+
+:TS_TA110 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA110"^^xsd:string ;
+    :PlannedFinish "2025-04-11"^^xsd:date ;
+    :PlannedStart "2025-03-23"^^xsd:date .
+
+:TS_TA120 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA120"^^xsd:string ;
+    :PlannedFinish "2025-04-30"^^xsd:date ;
+    :PlannedStart "2025-04-12"^^xsd:date .
+
+:TS_TA130 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA130"^^xsd:string ;
+    :PlannedFinish "2025-05-09"^^xsd:date ;
+    :PlannedStart "2025-05-01"^^xsd:date .
+
+:TS_TA140 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA140"^^xsd:string ;
+    :PlannedFinish "2025-05-30"^^xsd:date ;
+    :PlannedStart "2025-05-10"^^xsd:date .
+
+:TS_TA150 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA150"^^xsd:string ;
+    :PlannedFinish "2025-06-16"^^xsd:date ;
+    :PlannedStart "2025-06-01"^^xsd:date .
+
+:TS_TA160 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA160"^^xsd:string ;
+    :PlannedFinish "2025-06-30"^^xsd:date ;
+    :PlannedStart "2025-06-17"^^xsd:date .
+
+:TS_TA170 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA170"^^xsd:string ;
+    :PlannedFinish "2025-07-12"^^xsd:date ;
+    :PlannedStart "2025-07-01"^^xsd:date .
+
+:TS_TA180 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA180"^^xsd:string ;
+    :PlannedFinish "2025-07-31"^^xsd:date ;
+    :PlannedStart "2025-07-13"^^xsd:date .
+
+:TS_TA190 a :TaskSchedule,
+        owl:NamedIndividual ;
+    :Id "TS_TA190"^^xsd:string ;
+    :PlannedFinish "2025-08-15"^^xsd:date ;
+    :PlannedStart "2025-08-01"^^xsd:date .
+
+:TaskCategory a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Tiles a :MaterialResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 50.0 ;
+    :Id "Tiles"^^xsd:string ;
+    :Name "Tiles"^^xsd:string ;
+    :UnitOfMeasure "Per sqft"^^xsd:string .
+
+:Tiles_TA150 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 3000.0 ;
+    :Id "Tiles_TA150"^^xsd:string ;
+    :IsPrimaryResource true ;
+    :hasResourceCategory :Tiles ;
+    :hasResourceType :Material .
+
+:TrackingTag a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Vibrator_TA070 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 10.0 ;
+    :Id "Vibrator_TA070"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Vibrator ;
+    :hasResourceType :Equipment .
+
+:Vibrator_TA090 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 10.0 ;
+    :Id "Vibrator_TA090"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :Vibrator ;
+    :hasResourceType :Equipment .
+
+:WaterproofingMaterial_TA120 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 0.0 ;
+    :Id "WaterproofingMaterial_TA120"^^xsd:string ;
+    :IsPrimaryResource false ;
+    :hasResourceCategory :WaterproofingMaterial ;
+    :hasResourceType :Material .
+
+:WaterproofingMaterial_TA130 a :Resource,
+        owl:NamedIndividual ;
+    :BudgetedUnits 40.0 ;
+    :Id "WaterproofingMaterial_TA130"^^xsd:string ;
+    :IsPrimaryResource true ;
+    :hasResourceCategory :WaterproofingMaterial ;
+    :hasResourceType :Material .
+
+:hasPredecessors a owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :Task ;
+    owl:inverseOf :hasSuccessors .
+
+:hasSubTask a owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :Task ;
+    owl:inverseOf :isSubTaskOf .
+
+:hasSubWBS a owl:ObjectProperty ;
+    rdfs:domain :WBS ;
+    rdfs:range :WBS ;
+    owl:inverseOf :isSubWBSOf .
+
+:hasSuccessors a owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :Task ;
+    owl:inverseOf :hasPredecessors .
+
+:hasTask a owl:ObjectProperty ;
+    rdfs:domain :WBS ;
+    rdfs:range :Task ;
+    owl:inverseOf :isTaskOf .
+
+:isSubTaskOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :Task ;
+    owl:inverseOf :hasSubTask .
+
+:isSubWBSOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :WBS ;
+    rdfs:range :WBS ;
+    owl:inverseOf :hasSubWBS .
+
+:isTaskOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Task ;
+    rdfs:range :WBS ;
+    owl:inverseOf :hasTask .
+
+:Brick a :MaterialResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 6.0 ;
+    :Id "Brick"^^xsd:string ;
+    :Name "Brick"^^xsd:string ;
+    :UnitOfMeasure "Per No"^^xsd:string .
+
+:Excavator a :EquipmentResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 8000.0 ;
+    :Id "Excavator"^^xsd:string ;
+    :Name "Excavator"^^xsd:string ;
+    :UnitOfMeasure "Per day"^^xsd:string .
+
+:ResourceEnum a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Sand a :MaterialResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 1500.0 ;
+    :Id "Sand"^^xsd:string ;
+    :Name "Sand"^^xsd:string ;
+    :UnitOfMeasure "Per cum"^^xsd:string .
+
+:Vibrator a :EquipmentResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 500.0 ;
+    :Id "Vibrator"^^xsd:string ;
+    :Name "Vibrator"^^xsd:string ;
+    :UnitOfMeasure "Per day"^^xsd:string .
+
+:WaterproofingMaterial a :MaterialResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 400.0 ;
+    :Id "WaterproofingMaterial"^^xsd:string ;
+    :Name "WaterproofingMaterial"^^xsd:string ;
+    :UnitOfMeasure "Per kg_liter"^^xsd:string .
+
+:ConcreteBlocks a :MaterialResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 35.0 ;
+    :Id "ConcreteBlocks"^^xsd:string ;
+    :Name "ConcreteBlocks"^^xsd:string ;
+    :UnitOfMeasure "Per No"^^xsd:string .
+
+:ConcreteMixer a :EquipmentResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 2500.0 ;
+    :Id "ConcreteMixer"^^xsd:string ;
+    :Name "ConcreteMixer"^^xsd:string ;
+    :UnitOfMeasure "Per day"^^xsd:string .
+
+:Mason a :LaborResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 600.0 ;
+    :Id "Mason"^^xsd:string ;
+    :Name "Mason"^^xsd:string ;
+    :UnitOfMeasure "Per day"^^xsd:string .
+
+:Scaffolding a :EquipmentResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 100.0 ;
+    :Id "Scaffolding"^^xsd:string ;
+    :Name "Scaffolding"^^xsd:string ;
+    :UnitOfMeasure "Per Sqft"^^xsd:string .
+
+:WBS_004 a :WBS,
+        owl:NamedIndividual ;
+    :Description "Roof slab and waterproofing."^^xsd:string ;
+    :Id "WBS_004"^^xsd:string ;
+    :Name "Roofing"^^xsd:string .
+
+:WBS_006 a :WBS,
+        owl:NamedIndividual ;
+    :Description "Compound wall and landscaping."^^xsd:string ;
+    :Id "WBS_006"^^xsd:string ;
+    :Name "External Development"^^xsd:string .
+
+:ConstructionResource a owl:Class ;
+    rdfs:subClassOf :ResourceEnum .
+
+:WBS_001 a :WBS,
+        owl:NamedIndividual ;
+    :Description "Entire pre-construction phase."^^xsd:string ;
+    :Id "WBS_001"^^xsd:string ;
+    :Name "Pre-Construction"^^xsd:string .
+
+:WBS_002 a :WBS,
+        owl:NamedIndividual ;
+    :Description "Entire foundation phase."^^xsd:string ;
+    :Id "WBS_002"^^xsd:string ;
+    :Name "Foundation"^^xsd:string .
+
+:ResourceType a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Steel a :MaterialResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 70.0 ;
+    :Id "Steel"^^xsd:string ;
+    :Name "Steel"^^xsd:string ;
+    :UnitOfMeasure "Per kg"^^xsd:string .
+
+:WBS_005 a :WBS,
+        owl:NamedIndividual ;
+    :Description "Interior and exterior finishes."^^xsd:string ;
+    :Id "WBS_005"^^xsd:string ;
+    :Name "Finishing Works"^^xsd:string .
+
+:Cement a :MaterialResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 400.0 ;
+    :Id "Cement"^^xsd:string ;
+    :Name "Cement"^^xsd:string ;
+    :UnitOfMeasure "Per bag"^^xsd:string .
+
+:Phase a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:WBS_003 a :WBS,
+        owl:NamedIndividual ;
+    :Description "Construction above foundation."^^xsd:string ;
+    :Id "WBS_003"^^xsd:string ;
+    :Name "Superstructure"^^xsd:string .
+
+:WorkStatus a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Laborer a :LaborResource,
+        owl:NamedIndividual ;
+    :BaseRate_onDate 400.0 ;
+    :Id "Laborer"^^xsd:string ;
+    :Name "Laborer"^^xsd:string ;
+    :UnitOfMeasure "Per day"^^xsd:string .
+
+:Equipment a :ResourceType,
+        owl:NamedIndividual .
+
+:Project a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:WBS a owl:Class ;
+    rdfs:subClassOf :Project .
+
+:Labor a :ResourceType,
+        owl:NamedIndividual .
+
+:LaborResource a owl:Class ;
+    rdfs:subClassOf :ConstructionResource .
+
+:EquipmentResource a owl:Class ;
+    rdfs:subClassOf :ConstructionResource .
+
+:ResourceItem a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Material a :ResourceType,
+        owl:NamedIndividual .
+
+:MaterialResource a owl:Class ;
+    rdfs:subClassOf :ConstructionResource .
+
+:CostItem a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:TaskSchedule a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+:Task a owl:Class ;
+    rdfs:subClassOf :WBS .
+
+:Resource a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
