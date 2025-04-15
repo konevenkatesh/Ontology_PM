@@ -1,0 +1,7 @@
+ifcopenshell
+owlready2
+rdflib
+ipykernel
+python-dotenv
+openai
+streamlit
